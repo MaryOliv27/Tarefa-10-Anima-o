@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Heartbeat Animation</title>
+  <style>
+    body {
+        background-color: rgb(243, 174, 233);
+    }
+   .corpo {
+    text-align: center;
+   }
+    .coracao {
+      position: relative;
+      display: inline-block;
+      width: 500px;
+      height: 400px;
+      transform: rotate(-45deg);
+      animation: heartbeat 1s ease-in-out infinite;
+      
+   }
+
+    .coracao:before
+   {
+      position: absolute;
+      content: "";
+      left: 40px;
+      top: 0;
+      width: 500px;
+      height: 800px;
+      background-color: red;
+      border-radius: 250px 250px 0 0;
+      transform: rotate(-45deg);
+    }
+
+    .coracao:after {
+        position: absolute;
+      content: "";
+      left: 250px;
+      top: 0;
+      width: 500px;
+      height: 800px;
+      background-color: red;
+      border-radius: 250px 250px 0 0;
+      transform: rotate(45deg);
+    }
+
+    @keyframes heartbeat {
+      0% {
+        transform: scale(0.8);
+        filter: brightness(100%);
+      }
+      20% {
+        transform: scale(1);
+      }
+      40% {
+        transform: scale(0.8);
+      }
+      60% {
+        transform: scale(1);
+        filter: brightness(150%);
+      }
+      80% {
+        transform: scale(0.8);
+      }
+      100% {
+        transform: scale(0.8);
+        filter: brightness(100%);
+      }
+    }
+    h1{
+        font-size: 160px;
+        color: rgb(122, 16, 221);
+        padding-left: 300px;
+        }
+    h3{
+        font-size: 100px;
+        color: rgb(122, 16, 221);
+        padding-left: 300px;
+        }
+</style>
+
+<body>
+    <div class="corpo">
+    <h1>Descodificadas</h1>
+    <h3>Eu amo tecnologia!</h3>
+    <div class="coracao"></div>
+</div>
+</body>
+
+</html>
